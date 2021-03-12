@@ -267,7 +267,7 @@ demons = client.get_demons(name_contains="tartarus") # [{ "Tartarus's info "}]
 
 &nbsp;
 
-#### <li>after - before</li> 
+#### <li>after | before</li> 
 
 ```python
 from pointercrate import Client
@@ -278,7 +278,19 @@ demons = client.get_demons(after=5, before=9) # [{...}, {...}]
 
 demons = client.get_demons(limit=100) # [{...}, {...}, ...] List of top 100 demons
 demons = client.get_demons(limit=100, after=100) # [{...}, {...}, ...] Demons between top 101 and 200
+```
 
+&nbsp;
+
+#### <li>verifier_id</li> 
+
+```python
+# Kugelblitz's id is 598
+from pointercrate import Client
+client = Client()
+
+demons = client.get_demons(verifier_id=598) # [{SARY NEVER CLEAR's info}] 
+# List of levels that Kugelblitz has verified
 ```
 
 <!-- ROADMAP -->
