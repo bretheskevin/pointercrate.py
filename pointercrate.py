@@ -1,6 +1,5 @@
 import requests
 
-
 class Client:
     """
     Main class in demonlist.py, used for interacting with the pointercrate REST API.

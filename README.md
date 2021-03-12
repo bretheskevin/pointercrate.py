@@ -100,11 +100,13 @@ To get a local copy up and running follow these simple steps.
 ## Usage
 
 ```python
-from client import Client #replace "client" by the corresponding name if you renamed it
+from pointercrate import Client  # replace "pointercrate" by the corresponding name if you renamed it
 ```
 
 ## Documentation
+###Demons
 
+pointercrate.py
 
 <!-- ROADMAP -->
 ## Roadmap
