@@ -131,7 +131,7 @@ You can also get information about the demons that are not in the list anymore.
     <li><span style="font-weight: bold;">before</span> (Optional <span style="font-weight: bold;">[int]</span>) - Used for pagination, example below.</li>
     <li><span style="font-weight: bold;">verifier_id</span> (Optional <span style="font-weight: bold;">[int]</span>) - Filter with the verifier's id.</li>
     <li><span style="font-weight: bold;">publisher_id</span> (Optional <span style="font-weight: bold;">[int]</span>) - Filter with the publisher's id.</li> 
-    <li><span style="font-weight: bold;">publisher_name</span> (Optional <span style="font-weight: bold;">[str]</span>) - Filter with the name of the player who uploaded the level.</li>
+    <li><span style="font-weight: bold;">publisher_name</span> (Optional <span style="font-weight: bold;">[str]</span>) - Filter with the name of the player who uploaded the level.  [!!!] Case sensitive [!!!]</li>
     <li><span style="font-weight: bold;">listed</span> (Optional <span style="font-weight: bold;">[bool]</span>) - Sort the levels by their position in the lis. | Default is <span style="font-weight: bold; color: #813832">True</span> </li>
 </ul> 
 
@@ -305,6 +305,31 @@ client = Client()
 demons = client.get_demons(publisher_id=34134) # [{Tartarus's info}] 
 # List of levels that Dolphy has uploaded
 ```
+
+&nbsp;
+
+#### <li>publisher_name - CASE SENSITIVE</li> 
+
+```python
+from pointercrate import Client
+client = Client()
+
+demons = client.get_demons(publisher_name="ViPriN") # [{...}, {...}, ...] Contains all levels uploaded by "ViPriN"
+demons = client.get_demons(publisher_name="viprin") # [{}] No results because it's case sensitive
+```
+
+&nbsp;
+
+#### <li>listed</li> 
+
+```python
+from pointercrate import Client
+client = Client()
+
+demons = client.get_demons(listed=True) # default value, give the demons ordered by position
+demons = client.get_demons(listed=False) # give the demons disorderly
+```
+
 
 <!-- ROADMAP -->
 ## Roadmap
