@@ -244,24 +244,41 @@ print(demons[2].get("name"))    # Zodiac
 from pointercrate import Client
 client = Client()
 
-demon = client.get_demons(name="Tartarus") # [{....}]
+demons = client.get_demons(name="Tartarus") # [{....}]
 # List with one object containing information about the demon named Tartarus
 
-demon = client.get_demons(name="tartarus") # [] Empty list 
+demons = client.get_demons(name="tartarus") # [] Empty list 
 ```
 
 &nbsp;
 
-#### <li>name - CASE SENSITIVE</li> 
+#### <li>name_contains - NOT CASE SENSITIVE</li> 
 
 ```python
 from pointercrate import Client
 client = Client()
 
-demon = client.get_demons(name="Tartarus") # [{....}]
-# List with one object containing information about the demon named Tartarus
+demons = client.get_demons(name_contains="blade") # [{Edge of the Blade's info}, {Blade of Justice's info}....]
+# List of levels containing "edge" in their name
 
-demon = client.get_demons(name="tartarus") # [] Empty list 
+demons = client.get_demons(name_contains="tartarus") # [{ "Tartarus's info "}]
+# As you can see, it's not case sensitive so it can be a good alternative to "name"
+```
+
+&nbsp;
+
+#### <li>after - before</li> 
+
+```python
+from pointercrate import Client
+client = Client()
+
+demons = client.get_demons(after=5, before=9) # [{...}, {...}]
+# Demons which are at position 6, 7 and 8
+
+demons = client.get_demons(limit=100) # [{...}, {...}, ...] List of top 100 demons
+demons = client.get_demons(limit=100, after=100) # [{...}, {...}, ...] Demons between top 101 and 200
+
 ```
 
 <!-- ROADMAP -->
