@@ -25,7 +25,7 @@
   <h3 align="center">Pointercrate Python  API</h3>
 
   <p align="center">
-    pointercrate.py is a library that provides its users ability to interact with the api of Pointercrate.
+    pointercrate.py is a library that provides its users ability to interact with the api of <a href="https://pointercrate.com/">Pointercrate</a>.
     <br />
     <a href="#documentation"><strong>Explore the docs »</strong></a>
     <br />
