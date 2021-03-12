@@ -148,6 +148,46 @@ You can also get information about the demons that are not in the list anymore.
 
 **Return type:** List of objects
 
+```json
+[
+   {
+      "id": 250,
+      "position": 1,
+      "name": "Tartarus",
+      "requirement": 47,
+      "video": "https://www.youtube.com/watch?v=9YYQBbrsV5Y",
+      "publisher": {
+         "id": 34134,
+         "name": "Dolphy",
+         "banned": false
+      },
+      "verifier": {
+         "id": 34134,
+         "name": "Dolphy",
+         "banned": false
+      },
+      "level_id": 59075347
+   },
+   {
+      "id": 274, 
+      "position": 2, 
+      "name": "The Golden", 
+      "requirement": 50, "video": "https://www.youtube.com/watch?v=Aas8_QKLnuc", 
+      "publisher": 
+         {
+            "id": 35150, 
+            "name": "BoBoBoBoBoBoBo", 
+            "banned": false
+         }, 
+      "verifier": 
+         {
+            "id": 5240, 
+            "name": "nSwish", 
+            "banned": false
+         }, 
+      "level_id": 60978746}
+]
+```
 
 &nbsp;
 
