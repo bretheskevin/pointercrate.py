@@ -58,11 +58,11 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
-
+<!-- ABOUT THE PROJECT -->
+## About the project
 ### Built With
 
 * [Python 3.9](https://www.python.org/)
