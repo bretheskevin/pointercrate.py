@@ -58,7 +58,19 @@
          <a href="#documentation">Documentation</a>
          <ul>
             <li><a href="#demons">Demons</a></li>
-            <li><a href="#examples">Examples</a></li>
+            <li>
+            <a href="#examples">Examples</a>
+            <ul>
+               <li><a href="#limit">limit</a></li>
+               <li><a href="#name---case-sensitive">name</a></li>
+               <li><a href="#name_contains---not-case-sensitive">name_contains</a></li>
+               <li><a href="#after--before">after | before</a></li>
+               <li><a href="#verifier_id">verifier_id</a></li>
+               <li><a href="#publisher_id">publisher_id</a></li>
+               <li><a href="#publisher_name---case-sensitive">publisher_name</a></li>
+               <li><a href="#listed">listed</a></li>
+            </ul>
+            </li>
          </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -368,7 +380,7 @@ client = Client()
 demons = client.get_demons(listed=True) # default value, give the demons ordered by position
 demons = client.get_demons(listed=False) # give the demons disorderly
 ```
-
+&nbsp;
 
 <!-- ROADMAP -->
 ## Roadmap
