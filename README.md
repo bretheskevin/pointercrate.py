@@ -414,6 +414,7 @@ Project Link: [https://github.com/bretheskevin/pointercrate.py](https://github.c
 [issues-shield]: https://img.shields.io/github/issues/bretheskevin/pointercrate.py/pointercrate.py.svg?style=for-the-badge
 [issues-url]: https://github.com/bretheskevin/pointercrate.py/issues
 [license-shield]: https://img.shields.io/github/license/bretheskevin/pointercrate.py.svg?style=for-the-badge
-[license-url]: https://github.com/bretheskevin/pointercrate.py/blob/master/LICENSE.txt
+[license-url]: https://github.com/bretheskevin/pointercrate.py/blob/master/LICENSE
+<!-- @IGNORE PREVIOUS: link -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/k%C3%A9vin-br%C3%A8thes-08a6951b6/
