@@ -27,7 +27,7 @@
   <p align="center">
     pointercrate.py is a library that provides its users ability to interact with the api of Pointercrate.
     <br />
-    <a href="https://github.com/bretheskevin/pointercrate.py"><strong>Explore the docs »</strong></a>
+    <a href="#documentation"><strong>Explore the docs »</strong></a>
     <br />
     <a href="https://github.com/bretheskevin/pointercrate.py/issues">Report Bug</a>
     ·
@@ -54,6 +54,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#documentation">Documentation</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -102,6 +103,7 @@ To get a local copy up and running follow these simple steps.
 from client import Client #replace "client" by the corresponding name if you renamed it
 ```
 
+## Documentation
 
 
 <!-- ROADMAP -->
