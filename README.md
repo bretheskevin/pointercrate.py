@@ -58,7 +58,15 @@
          <a href="#documentation">Documentation</a>
          <ul>
             <li><a href="#demons">Demons</a></li>
-            <li><a href="#examples">Examples</a></li>
+            <li>
+            <a href="#examples">Examples</a>
+             <ul>
+                <li><a href="#limit">limit</a></li>
+                <li>
+                <a href="#name">name</a>
+                </li>
+             </ul>
+            </li>
          </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -238,8 +246,7 @@ print(demons[2].get("name"))    # Zodiac
 &nbsp;
 
 
-#### <li>name - CASE SENSITIVE</li> 
-
+#### <li>name - CASE SENSITIVE</li>
 ```python
 from pointercrate import Client
 client = Client()
