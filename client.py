@@ -19,7 +19,7 @@ class Client:
         - after: Used for pagination, here is an example:
                     limit = 100: You will get the top 100 levels of the list (listed is True by default)
                     limit = 100 AND after = 100: You will get the levels from position 101 to 200 because
-                it will skip the 100 first one.        
+                it will skip the 100 first ones.        
         - before: Also used for pagination, here is an example:
                     limit = 100 AND before = 6 : You will get the 5 first levels
         You can use before and after to easily filter by the position:
