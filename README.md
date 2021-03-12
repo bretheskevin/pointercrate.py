@@ -58,15 +58,7 @@
          <a href="#documentation">Documentation</a>
          <ul>
             <li><a href="#demons">Demons</a></li>
-            <li>
-            <a href="#examples">Examples</a>
-             <ul>
-                <li><a href="#limit">limit</a></li>
-                <li>
-                <a href="#name">name</a>
-                </li>
-             </ul>
-            </li>
+            <li><a href="#examples">Examples</a></li>
          </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
