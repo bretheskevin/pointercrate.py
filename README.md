@@ -293,6 +293,19 @@ demons = client.get_demons(verifier_id=598) # [{SARY NEVER CLEAR's info}]
 # List of levels that Kugelblitz has verified
 ```
 
+&nbsp;
+
+#### <li>publisher_id</li> 
+
+```python
+# Dolphy's id is 34134
+from pointercrate import Client
+client = Client()
+
+demons = client.get_demons(publisher_id=34134) # [{Tartarus's info}] 
+# List of levels that Dolphy has uploaded
+```
+
 <!-- ROADMAP -->
 ## Roadmap
 
