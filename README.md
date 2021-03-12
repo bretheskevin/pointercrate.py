@@ -106,12 +106,12 @@ python3 -m pip install requests==2.25.1
 
 ### Installation
 
-1. Clone the pointercrate.py
+1. Clone the repository
    ```sh
    git clone https://github.com/bretheskevin/pointercrate.py.git
    ```
 
-2. Put the client.py file in your project (you can rename it)
+2. Put the pointercrate.py file in your project (you can rename it)
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -140,7 +140,7 @@ You can also get information about the demons that are not in the list anymore.
     <li><span style="font-weight: bold;">verifier_id</span> (Optional <span style="font-weight: bold;">[int]</span>) - Filter with the verifier's id.</li>
     <li><span style="font-weight: bold;">publisher_id</span> (Optional <span style="font-weight: bold;">[int]</span>) - Filter with the publisher's id.</li> 
     <li><span style="font-weight: bold;">publisher_name</span> (Optional <span style="font-weight: bold;">[str]</span>) - Filter with the name of the player who uploaded the level.  [!!!] Case sensitive [!!!]</li>
-    <li><span style="font-weight: bold;">listed</span> (Optional <span style="font-weight: bold;">[bool]</span>) - Sort the levels by their position in the lis. | Default is <span style="font-weight: bold; color: #813832">True</span> </li>
+    <li><span style="font-weight: bold;">listed</span> (Optional <span style="font-weight: bold;">[bool]</span>) - Sort the levels by their position in the list. | Default is <span style="font-weight: bold; color: #813832">True</span> </li>
 </ul> 
 
 
