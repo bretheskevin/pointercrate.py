@@ -128,7 +128,7 @@ client = Client()
 pointercrate.py allows you searching and interacting with the demons of pointercrate !
 You can also get information about the demons that are not in the list anymore.
 
-###<span style="color: grey">*function*</span> get_demons(<span style="color: grey">*\*\*options*</span>)
+### <span style="color: grey">*function*</span> get_demons(<span style="color: grey">*\*\*options*</span>)
 **Parameters:** 
 <ul>
     <li><span style="font-weight: bold;">limit</span> (Optional <span style="font-weight: bold;">[int]</span>) - The maximum amount of object to return. Must lie between 1 and 100 | Default is <span style="font-weight: bold; color: #813832;">50</span></li>
