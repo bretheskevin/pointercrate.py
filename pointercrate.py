@@ -1,18 +1,20 @@
 import requests
 
+
 class Client:
     """
     Main class in demonlist.py, used for interacting with the pointercrate REST API.
     """
 
     @staticmethod
-    def get_demon(limit=50, name="", name_contains="", after=0, before=0, verifier_id=0, publisher_id=0, publisher_name="", listed=True):
+    def get_demons(limit=50, name="", name_contains="", after=0, before=0, verifier_id=0, publisher_id=0,
+                   publisher_name="", listed=True):
         api_v2 = "https://pointercrate.com/api/v2/"
         """
         :param
         - limit: The maximum amount of object to return. Must lie between 1 and 100. Default is 50.
         - name: Filter with the name of the demon [!!!] Case sensitive [!!!]
-        - name_contains: Check if a demon has a word in his name, not case sensitive 
+        - name_contains: Check if a demon has the specified string in his name, not case sensitive 
         so it's a good alternative to name filter.
         
         - after: Used for pagination, here is an example:
@@ -30,9 +32,7 @@ class Client:
         - listed: Sort the levels by position. Default is True
 
         :return:
-        - List of objects if there no position provided
-        - An object containing the demon's information (The demon is at the provided position)
-
+        - List of objects containing all demons information.
         """
 
         # Handling errors
@@ -61,11 +61,11 @@ class Client:
         if name_contains != "":
             params += f"&name_contains={name_contains.replace(' ', '+')}"
 
-        #after
+        # after
         if after != 0:
             params += f"&after={after}"
 
-        #before
+        # before
         if before != 0:
             params += f"&before={before}"
 
