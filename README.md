@@ -54,7 +54,13 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#documentation">Documentation</a></li>
+    <li>
+         <a href="#documentation">Documentation</a>
+         <ul>
+            <li><a href="#demons">Demons</a></li>
+            <li><a href="#examples">Examples</a></li>
+         </ul>
+    </li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -77,15 +83,18 @@ To get a local copy up and running follow these simple steps.
 
 
 * requests
-  #### Windows
-  ```bash
-  py -3 -m pip install requests==2.25.1
-  ```
+
+#### Windows
+
+```
+py -3 -m pip install requests==2.25.1
+``` 
+
   
-  #### Linux
-  ```sh
-  python3 -m pip install requests==2.25.1
-  ```
+#### Linux
+```shell
+python3 -m pip install requests==2.25.1
+```
 
 ### Installation
 
@@ -101,18 +110,164 @@ To get a local copy up and running follow these simple steps.
 
 ```python
 from pointercrate import Client  # replace "pointercrate" by the corresponding name if you renamed it
+client = Client()
 ```
 
 ## Documentation
-###Demons
 
-pointercrate.py
+### Demons
+
+pointercrate.py allows you searching and interacting with the demons of pointercrate !
+You can also get information about the demons that are not in the list anymore.
+
+###<span style="color: grey">*function*</span> get_demons(<span style="color: grey">*\*\*options*</span>)
+**Parameters:** 
+<ul>
+    <li><span style="font-weight: bold;">limit</span> (Optional <span style="font-weight: bold;">[int]</span>) - The maximum amount of object to return. Must lie between 1 and 100 | Default is <span style="font-weight: bold; color: #813832;">50</span></li>
+    <li><span style="font-weight: bold;">name</span> (Optional <span style="font-weight: bold;">[str]</span>) - Filter with the name of the demon [!!!] Case sensitive [!!!]</li>
+    <li><span style="font-weight: bold;">name_contains</span> (Optional <span style="font-weight: bold;">[str]</span>) - Check if a demon has the specified string in his name, not case sensitive 
+        so it's a good alternative to name filter.</li>
+    <li><span style="font-weight: bold;">after</span> (Optional <span style="font-weight: bold;">[int]</span>) - Used for pagination, example below.</li>
+    <li><span style="font-weight: bold;">before</span> (Optional <span style="font-weight: bold;">[int]</span>) - Used for pagination, example below.</li>
+    <li><span style="font-weight: bold;">verifier_id</span> (Optional <span style="font-weight: bold;">[int]</span>) - Filter with the verifier's id.</li>
+    <li><span style="font-weight: bold;">publisher_id</span> (Optional <span style="font-weight: bold;">[int]</span>) - Filter with the publisher's id.</li> 
+    <li><span style="font-weight: bold;">publisher_name</span> (Optional <span style="font-weight: bold;">[str]</span>) - Filter with the name of the player who uploaded the level.</li>
+    <li><span style="font-weight: bold;">listed</span> (Optional <span style="font-weight: bold;">[bool]</span>) - Sort the levels by their position in the lis. | Default is <span style="font-weight: bold; color: #813832">True</span> </li>
+</ul> 
+
+
+**Returns:** All demons' information.
+
+**Return type:** List of objects
+
+
+&nbsp;
+
+`id` 
+
+__Type:__ <span style="font-weight: bold; color: #813832">int</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The ID of the object in the database.
+
+&nbsp;
+
+`position` 
+
+__Type:__ <span style="font-weight: bold; color: #813832">int</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The position of the demon in the list.
+
+&nbsp;
+
+`name` 
+
+__Type:__ <span style="font-weight: bold; color: #813832">str</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The name of the demon.
+
+&nbsp;
+
+`requirement` 
+
+__Type:__ <span style="font-weight: bold; color: #813832">int</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The requirement % to get your record accepted.
+
+&nbsp;
+
+`video` 
+
+__Type:__ <span style="font-weight: bold; color: #813832">str</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link of the video of the level.
+
+&nbsp;
+
+*Object* `publisher: contains information about the player who uploaded the level` 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`id`
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__Type:__ <span style="font-weight: bold; color: #813832">int</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Player's ID.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`name`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__Type:__ <span style="font-weight: bold; color: #813832">str</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Player's name.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`banned`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__Type:__ <span style="font-weight: bold; color: #813832">bool</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the player is banned from pointercrate or not.
+
+&nbsp;
+
+*Object* `verifier: contains information about the player who verified the level`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`id`
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__Type:__ <span style="font-weight: bold; color: #813832">int</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Player's ID.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`name`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__Type:__ <span style="font-weight: bold; color: #813832">str</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Player's name.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`banned`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__Type:__ <span style="font-weight: bold; color: #813832">bool</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the verifier is banned from pointercrate or not.
+
+&nbsp;
+
+`level_id` 
+
+__Type:__ <span style="font-weight: bold; color: #813832">int</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The ID of the demon.
+
+### Examples
+
+#### <li>limit</li> 
+
+```python
+from pointercrate import Client
+client = Client()
+
+demons = client.get_demons(limit=3) # [{....}, {....}, {....}]
+# List of 3 objects containing the top 3
+
+
+# demonlist from march 2021 
+print(demons[0].get("name"))    # Tartarus
+print(demons[1].get("name"))    # The Golden
+print(demons[2].get("name"))    # Zodiac
+```
+
+&nbsp;
+
+
+#### <li>name - CASE SENSITIVE</li> 
+
+```python
+from pointercrate import Client
+client = Client()
+
+demon = client.get_demons(name="Tartarus") # [{....}]
+# List with one object containing information about the demon named Tartarus
+
+demon = client.get_demons(name="tartarus") # [] Empty list 
+```
+
+&nbsp;
+
+#### <li>name - CASE SENSITIVE</li> 
+
+```python
+from pointercrate import Client
+client = Client()
+
+demon = client.get_demons(name="Tartarus") # [{....}]
+# List with one object containing information about the demon named Tartarus
+
+demon = client.get_demons(name="tartarus") # [] Empty list 
+```
 
 <!-- ROADMAP -->
 ## Roadmap
 
 See the [open issues](https://github.com/bretheskevin/pointercrate.py/issues) for a list of proposed features (and known issues).
-
 
 
 <!-- CONTRIBUTING -->
