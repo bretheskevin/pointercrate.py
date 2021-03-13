@@ -25,12 +25,12 @@
   <h3 align="center">Pointercrate Python  API</h3>
 
   <p align="center">
-    pointercrate.py is a library that provides its users abilityj to interact with the api of <a href="https://pointercrate.com/">Pointercrate</a>.
+    pointercratepy is a library that provides its users abilityj to interact with the api of <a href="https://pointercrate.com/">Pointercrate</a>.
     <br />
-    <a href="#documentation"><strong>Explore the docs »</strong></a>
+    <a href="#documentation"><strong>Explore the docs</strong></a>
     <br />
     <a href="https://github.com/bretheskevin/pointercrate.py/issues">Report Bug</a>
-    ·
+    |
     <a href="https://github.com/bretheskevin/pointercrate.py/issues">Request Feature</a>
  </p>
 
@@ -49,7 +49,6 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -77,38 +76,39 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#credits">Credits</a></li>
   </ol>
 </details>
 
 <!-- ABOUT THE PROJECT -->
-## About the project
-### Built With
+## <span id="about-the-project">About the project</span>
+### <span id="built-with">Built With</span>
 
 * [Python 3.9](https://www.python.org/)
 
 <!-- GETTING STARTED -->
-## Getting Started
+## <span id="getting-started">Getting Started</span>
 
 
-### Installation
+### <span id="installation">Installation</span>
 
 #### Windows
 
 ```
-python -m pip install pointercrate.py
+python -m pip install pointercratepy
 ``` 
 
   
 #### Linux
 ```shell
-python3 -m pip install pointercrate.py
+python3 -m pip install pointercratepy
 ```
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## <span id="usage">Usage</span>
 
 ```python
-from pointercrate import Client
+from pointercratepy import Client
 
 client = Client()
 ```
@@ -116,9 +116,9 @@ client = Client()
 ## <span id="documentation">Documentation</span>
 
 
-### Demons
+### <span id="demons">Demons</span>
 
-pointercrate.py allows you searching and interacting with the demons of pointercrate !
+pointercratepy allows you searching and interacting with the demons of pointercrate !
 You can also get information about the demons that are not in the list anymore.
 
 ### <span style="color: grey">*function*</span> get_demons(<span style="color: grey">*\*\*options*</span>)
@@ -258,12 +258,12 @@ __Type:__ <span style="font-weight: bold; color: #813832">str</span>
 __Type:__ <span style="font-weight: bold; color: #813832">int</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The ID of the demon.
 
-### Examples
+### <span id="examples">Examples</span>
 
-#### <li>limit</li>
+#### <li id="limit">limit</li>
 
 ```python
-from __init__ import Client
+from pointercratepy import Client
 
 client = Client()
 
@@ -280,10 +280,10 @@ print(demons[2].get("name"))  # Zodiac
 &nbsp;
 
 
-#### <li>name - CASE SENSITIVE</li>
+#### <li id="name---case-sensitive">name - CASE SENSITIVE</li>
 
 ```python
-from __init__ import Client
+from pointercratepy import Client
 
 client = Client()
 
@@ -295,10 +295,10 @@ demons = client.get_demons(name="tartarus")  # [] Empty list
 
 &nbsp;
 
-#### <li>name_contains - NOT CASE SENSITIVE</li>
+#### <li id="name_contains---not-case-sensitive">name_contains - NOT CASE SENSITIVE</li>
 
 ```python
-from __init__ import Client
+from pointercratepy import Client
 
 client = Client()
 
@@ -311,10 +311,10 @@ demons = client.get_demons(name_contains="tartarus")  # [{ "Tartarus's info "}]
 
 &nbsp;
 
-#### <li>after | before</li>
+#### <li id="after--before">after | before</li>
 
 ```python
-from __init__ import Client
+from pointercratepy import Client
 
 client = Client()
 
@@ -327,11 +327,11 @@ demons = client.get_demons(limit=100, after=100)  # [{...}, {...}, ...] Demons b
 
 &nbsp;
 
-#### <li>verifier_id</li>
+#### <li id="verifier_id">verifier_id</li>
 
 ```python
 # Kugelblitz's id is 598
-from __init__ import Client
+from pointercratepy import Client
 
 client = Client()
 
@@ -341,11 +341,11 @@ demons = client.get_demons(verifier_id=598)  # [{SARY NEVER CLEAR's info}]
 
 &nbsp;
 
-#### <li>publisher_id</li>
+#### <li id="publisher_id">publisher_id</li>
 
 ```python
 # Dolphy's id is 34134
-from __init__ import Client
+from pointercratepy import Client
 
 client = Client()
 
@@ -355,10 +355,10 @@ demons = client.get_demons(publisher_id=34134)  # [{Tartarus's info}]
 
 &nbsp;
 
-#### <li>publisher_name - CASE SENSITIVE</li>
+#### <li id="publisher_name---case-sensitive">publisher_name - CASE SENSITIVE</li>
 
 ```python
-from __init__ import Client
+from pointercratepy import Client
 
 client = Client()
 
@@ -368,10 +368,10 @@ demons = client.get_demons(publisher_name="viprin")  # [{}] No results because i
 
 &nbsp;
 
-#### <li>listed</li>
+#### <li id="listed">listed</li>
 
 ```python
-from __init__ import Client
+from pointercratepy import Client
 
 client = Client()
 
@@ -381,13 +381,13 @@ demons = client.get_demons(listed=False)  # give the demons disorderly
 &nbsp;
 
 <!-- ROADMAP -->
-## Roadmap
+## <span id="roadmap">Roadmap</span>
 
 See the [open issues](https://github.com/bretheskevin/pointercrate.py/issues) for a list of proposed features (and known issues).
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+## <span id="contributing">Contributing</span>
 
 Contributions are what make the open source community such an amazing place to be learned, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -398,21 +398,21 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 <!-- LICENSE -->
-## License
+## <span id="license">License</span>
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 
 
 <!-- CONTACT -->
-## Contact
+## <span id="contact">Contact</span>
 
 Hikudo - [@bretheskevin](https://twitter.com/bretheskevin) - bretheskevin@gmail.com
 
 Discord - Hikudo#1714
 
 <!-- CREDITS -->
-## Credits
+## <span id="credits">Credits</span>
 <li>
 Thanks to <a href="https://github.com/nekitdev">nekitdev</a>, this is my first API and his work on <a href="https://gdpy.readthedocs.io/en/latest/index.html">gd.py</a> helped me to write de documentation and find a description for the project.
 </li>
