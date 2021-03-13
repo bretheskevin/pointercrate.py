@@ -25,7 +25,7 @@
   <h3 align="center">Pointercrate Python  API</h3>
 
   <p align="center">
-    pointercrate.py is a library that provides its users ability to interact with the api of <a href="https://pointercrate.com/">Pointercrate</a>.
+    pointercrate.py is a library that provides its users abilityj to interact with the api of <a href="https://pointercrate.com/">Pointercrate</a>.
     <br />
     <a href="#documentation"><strong>Explore the docs »</strong></a>
     <br />
@@ -121,7 +121,8 @@ python3 -m pip install requests==2.25.1
 ## Usage
 
 ```python
-from pointercrate import Client  # replace "pointercrate" by the corresponding name if you renamed it
+from __init__ import Client  # replace "pointercrate" by the corresponding name if you renamed it
+
 client = Client()
 ```
 
@@ -271,114 +272,123 @@ __Type:__ <span style="font-weight: bold; color: #813832">int</span>
 
 ### Examples
 
-#### <li>limit</li> 
+#### <li>limit</li>
 
 ```python
-from pointercrate import Client
+from __init__ import Client
+
 client = Client()
 
-demons = client.get_demons(limit=3) # [{....}, {....}, {....}]
+demons = client.get_demons(limit=3)  # [{....}, {....}, {....}]
 # List of 3 objects containing the top 3
 
 
 # demonlist from march 2021 
-print(demons[0].get("name"))    # Tartarus
-print(demons[1].get("name"))    # The Golden
-print(demons[2].get("name"))    # Zodiac
+print(demons[0].get("name"))  # Tartarus
+print(demons[1].get("name"))  # The Golden
+print(demons[2].get("name"))  # Zodiac
 ```
 
 &nbsp;
 
 
 #### <li>name - CASE SENSITIVE</li>
+
 ```python
-from pointercrate import Client
+from __init__ import Client
+
 client = Client()
 
-demons = client.get_demons(name="Tartarus") # [{....}]
+demons = client.get_demons(name="Tartarus")  # [{....}]
 # List with one object containing information about the demon named Tartarus
 
-demons = client.get_demons(name="tartarus") # [] Empty list 
+demons = client.get_demons(name="tartarus")  # [] Empty list 
 ```
 
 &nbsp;
 
-#### <li>name_contains - NOT CASE SENSITIVE</li> 
+#### <li>name_contains - NOT CASE SENSITIVE</li>
 
 ```python
-from pointercrate import Client
+from __init__ import Client
+
 client = Client()
 
-demons = client.get_demons(name_contains="blade") # [{Edge of the Blade's info}, {Blade of Justice's info}....]
+demons = client.get_demons(name_contains="blade")  # [{Edge of the Blade's info}, {Blade of Justice's info}....]
 # List of levels containing "edge" in their name
 
-demons = client.get_demons(name_contains="tartarus") # [{ "Tartarus's info "}]
+demons = client.get_demons(name_contains="tartarus")  # [{ "Tartarus's info "}]
 # As you can see, it's not case sensitive so it can be a good alternative to "name"
 ```
 
 &nbsp;
 
-#### <li>after | before</li> 
+#### <li>after | before</li>
 
 ```python
-from pointercrate import Client
+from __init__ import Client
+
 client = Client()
 
-demons = client.get_demons(after=5, before=9) # [{...}, {...}]
+demons = client.get_demons(after=5, before=9)  # [{...}, {...}]
 # Demons which are at position 6, 7 and 8
 
-demons = client.get_demons(limit=100) # [{...}, {...}, ...] List of top 100 demons
-demons = client.get_demons(limit=100, after=100) # [{...}, {...}, ...] Demons between top 101 and 200
+demons = client.get_demons(limit=100)  # [{...}, {...}, ...] List of top 100 demons
+demons = client.get_demons(limit=100, after=100)  # [{...}, {...}, ...] Demons between top 101 and 200
 ```
 
 &nbsp;
 
-#### <li>verifier_id</li> 
+#### <li>verifier_id</li>
 
 ```python
 # Kugelblitz's id is 598
-from pointercrate import Client
+from __init__ import Client
+
 client = Client()
 
-demons = client.get_demons(verifier_id=598) # [{SARY NEVER CLEAR's info}] 
+demons = client.get_demons(verifier_id=598)  # [{SARY NEVER CLEAR's info}] 
 # List of levels that Kugelblitz has verified
 ```
 
 &nbsp;
 
-#### <li>publisher_id</li> 
+#### <li>publisher_id</li>
 
 ```python
 # Dolphy's id is 34134
-from pointercrate import Client
+from __init__ import Client
+
 client = Client()
 
-demons = client.get_demons(publisher_id=34134) # [{Tartarus's info}] 
+demons = client.get_demons(publisher_id=34134)  # [{Tartarus's info}] 
 # List of levels that Dolphy has uploaded
 ```
 
 &nbsp;
 
-#### <li>publisher_name - CASE SENSITIVE</li> 
+#### <li>publisher_name - CASE SENSITIVE</li>
 
 ```python
-from pointercrate import Client
+from __init__ import Client
+
 client = Client()
 
-demons = client.get_demons(publisher_name="ViPriN") # [{...}, {...}, ...] Contains all levels uploaded by "ViPriN"
-demons = client.get_demons(publisher_name="viprin") # [{}] No results because it's case sensitive
+demons = client.get_demons(publisher_name="ViPriN")  # [{...}, {...}, ...] Contains all levels uploaded by "ViPriN"
+demons = client.get_demons(publisher_name="viprin")  # [{}] No results because it's case sensitive
 ```
 
 &nbsp;
 
-#### <li>listed</li> 
+#### <li>listed</li>
 
 ```python
-from pointercrate import Client
+from __init__ import Client
+
 client = Client()
 
-demons = client.get_demons(listed=True) # default value, give the demons ordered by position
-demons = client.get_demons(listed=False) # give the demons disorderly
+demons = client.get_demons(listed=True)  # default value, give the demons ordered by position
+demons = client.get_demons(listed=False)  # give the demons disorderly
 ```
 &nbsp;
 
@@ -399,8 +409,6 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
-
 <!-- LICENSE -->
 ## License
 
@@ -414,6 +422,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Hikudo - [@bretheskevin](https://twitter.com/bretheskevin) - bretheskevin@gmail.com
 
 Discord - Hikudo#1714
+
+<!-- CREDITS -->
+## Credits
+<li>
+Thanks to <a href="https://github.com/nekitdev">nekitdev</a>, this is my first API and his work on <a href="https://gdpy.readthedocs.io/en/latest/index.html">gd.py</a> helped me to write de documentation and find a description for the project.
+</li>
+<li>Thanks to Nimbus who answered my questions about the REST API of pointercrate.</li>
 
 &nbsp;
 
