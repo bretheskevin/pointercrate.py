@@ -25,7 +25,7 @@
   <h3 align="center">Pointercrate Python  API</h3>
 
   <p align="center">
-    pointercratepy is a library that provides its users abilityj to interact with the api of <a href="https://pointercrate.com/">Pointercrate</a>.
+    pointercratepy is a library that provides its users ability to interact with the api of <a href="https://pointercrate.com/">Pointercrate</a>.
     <br />
     <a href="#documentation"><strong>Explore the docs</strong></a>
     <br />
@@ -77,6 +77,7 @@
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#credits">Credits</a></li>
+    <li><a href="#changelog">Changelog</a></li>
   </ol>
 </details>
 
@@ -417,6 +418,20 @@ Discord - Hikudo#1714
 Thanks to <a href="https://github.com/nekitdev">nekitdev</a>, this is my first API and his work on <a href="https://gdpy.readthedocs.io/en/latest/index.html">gd.py</a> helped me to write de documentation and find a description for the project.
 </li>
 <li>Thanks to Nimbus who answered my questions about the REST API of pointercrate.</li>
+
+
+<!-- CHANGELOG -->
+## <span id="changelog">Changelog [day/month/year]</span>
+
+0.0.1 < 1.0.0 (3/13/2021)
+------------------
+<li>Setting up pip</li>
+<li>First release</li>
+<li>method get_demons() : Get information about the demons of pointercrate.</li>
+
+1.0.1 & 1.0.2 (3/13/2021)
+------------------
+<li>Documentation correction</li>
 
 &nbsp;
 
