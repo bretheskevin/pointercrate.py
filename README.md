@@ -19,7 +19,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/bretheskevin/pointercrate.py">
-    <img src="images/logo.png" alt="Logo">
+    <img src="https://i.imgur.com/Voi701d.png" alt="Logo">
   </a>
 
   <h3 align="center">Pointercrate Python  API</h3>
@@ -89,44 +89,32 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
 
-### Prerequisites
-
-
-* requests
+### Installation
 
 #### Windows
 
 ```
-py -3 -m pip install requests==2.25.1
+python -m pip install pointercrate.py
 ``` 
 
   
 #### Linux
 ```shell
-python3 -m pip install requests==2.25.1
+python3 -m pip install pointercrate.py
 ```
-
-### Installation
-
-1. Clone the repository
-   ```sh
-   git clone https://github.com/bretheskevin/pointercrate.py.git
-   ```
-
-2. Put the pointercrate.py file in your project (you can rename it)
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 ```python
-from __init__ import Client  # replace "pointercrate" by the corresponding name if you renamed it
+from pointercrate import Client
 
 client = Client()
 ```
 
-## Documentation
+## <span id="documentation">Documentation</span>
+
 
 ### Demons
 
