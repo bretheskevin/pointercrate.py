@@ -413,6 +413,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Hikudo - [@bretheskevin](https://twitter.com/bretheskevin) - bretheskevin@gmail.com
 
+Discord - Hikudo#1714
+
+&nbsp;
+
 Project Link: [https://github.com/bretheskevin/pointercrate.py](https://github.com/bretheskevin/pointercrate.py)
 
 <!-- MARKDOWN LINKS & IMAGES -->
