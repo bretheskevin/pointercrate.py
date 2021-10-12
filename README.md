@@ -423,13 +423,13 @@ Thanks to <a href="https://github.com/nekitdev">nekitdev</a>, this is my first A
 <!-- CHANGELOG -->
 ## <span id="changelog">Changelog [day/month/year]</span>
 
-0.0.1 < 1.0.0 (3/13/2021)
+0.0.1 < 1.0.0 (13/03/2021)
 ------------------
 <li>Setting up pip</li>
 <li>First release</li>
 <li>method get_demons() : Get information about the demons of pointercrate.</li>
 
-1.0.1 & 1.0.2 (3/13/2021)
+1.0.1 & 1.0.2 (13/03/2021)
 ------------------
 <li>Documentation correction</li>
 
