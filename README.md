@@ -542,7 +542,7 @@ Discord - Hikudo#1714
 ## <span id="credits">Credits</span>
 
 <li>
-Thanks to <a href="https://github.com/nekitdev">nekitdev</a>, this is my first API and his work on <a href="https://gdpy.readthedocs.io/en/latest/index.html">gd.py</a> helped me to write de documentation and find a description for the project.
+Thanks to <a href="https://github.com/nekitdev">nekitdev</a>, this is my first API wrapper and his work on <a href="https://gdpy.readthedocs.io/en/latest/index.html">gd.py</a> helped me to write de documentation and find a description for the project.
 </li>
 <li>Thanks to Nimbus who answered my questions about the REST API of pointercrate.</li>
 
