@@ -596,4 +596,4 @@ Project Link: [https://github.com/bretheskevin/pointercrate.py](https://github.c
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 
-[linkedin-url]: https://www.linkedin.com/in/k%C3%A9vin-br%C3%A8thes-08a6951b6/
+[linkedin-url]: https://www.linkedin.com/in/bretheskevin
