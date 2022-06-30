@@ -1,1 +1,6 @@
 .idea/
+.pypirc
+dist/
+build/
+pointercratepy.egg-info/
+pointercratepy/__pycache__
