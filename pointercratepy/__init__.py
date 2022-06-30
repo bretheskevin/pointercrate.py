@@ -1,5 +1,6 @@
 import requests
 
+api_v1 = "https://pointercrate.com/api/v1/"
 api_v2 = "https://pointercrate.com/api/v2/"
 
 class Client:
@@ -87,7 +88,7 @@ class Client:
         return response
 
     @staticmethod
-    def get_players_ranked(limit=50, name_contains=None, name=None, after=None, before=None, nation=None, continent=None):
+    def get_players_ranked(limit=50, name_contains=None, name=None, after=None, before=None, nation=None):
         """
 
         Args:
@@ -101,8 +102,7 @@ class Client:
                         - limit = 100 AND before = 6 : You will get the top 5 demonlist players
                     You can use before and after to easily find players using position:
                         - after=9 and before=25: 10th to 24th ranked players
-            nation: The country of the player to search with.
-            continent: The continent of the player to search with.
+            nation: The country of the player to search with. It has to be the nation's name, or its ISO countrycode
 
         Returns:
             list: List of objects containing information about players, ordered according to their rank.
@@ -120,7 +120,7 @@ class Client:
             """)
             return
         else:
-            params += f"?limit=50"
+            params += f"?limit={limit}"
         
         if after:
             params += f"&after={after}"
@@ -135,14 +135,14 @@ class Client:
             params += f"&name={name_contains.replace(' ', '+')}"
         if nation:
             params += f"&nation={nation}"
-        
-        if continent:
-            params += f"&continent={continent}"
-        
+
         # request the json
-        response = requests.get(api_v2 + "players/ranking/" + params).json()
+        response = requests.get(api_v1 + "players/ranking/" + params).json()
 
         if not response:
             print("No results! Check the filters that you used.")
 
         return response
+
+
+client = Client()
